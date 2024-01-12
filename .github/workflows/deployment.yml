@@ -18,7 +18,7 @@ jobs:
       - name: Run download.sh
         run: |
           git clone https://github.com/dop2001/AutoSignIn.git
-          cd Action
+          cd AutoSignIn
           chmod +x scripts/download.sh
           ./scripts/download.sh
           python main.py
