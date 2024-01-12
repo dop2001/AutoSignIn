@@ -22,7 +22,7 @@ class AutoSignIn:
         self.signin_url = self.base_url + '/center/work/problem'
         self.signin_value = ['auth-header-sign', 'sign-footer']
 
-        self.timeout = 15
+        self.timeout = 20
 
     def login(self):
         # 调用 WebDriver 对象的 get 方法, 可以让浏览器打开指定的网址
@@ -67,14 +67,17 @@ class AutoSignIn:
             EC.visibility_of_element_located((By.CLASS_NAME, self.signin_value[1])))
         signElement.click()
 
+        print(signElement)
+
 
 if __name__ == '__main__':
     # 配置
     options = Options()
-    options.add_argument("headless")
+    options.add_argument("--headless")
+    options.add_argument('--window-size=1920,1080')
 
     # 创建 WebDriver.Edge 对象
-    driver = webdriver.Edge(service=Service(r'driver/msedgedriver'), options=options)
+    driver = webdriver.Edge(service=Service(r'driver/msedgedriver.exe'), options=options)
 
     autoSignIn = AutoSignIn(driver, Config())
 
