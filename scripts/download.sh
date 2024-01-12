@@ -17,7 +17,15 @@ if [ $? -ne 0 ]; then
 fi
 
 # download and install Edge driver
+wget -c $DriverURL -O Driver.zip
+mkdir driver && unzip Driver.zip -C ./driver
 
+if [ $? -ne 0 ]; then
+    echo "Driver install fail!"
+    exit 1
+fi
 
 
 echo $CurrentPath
+
+ls -al ./drive
