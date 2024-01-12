@@ -3,7 +3,7 @@ name: test
 on: 
   workflow_dispatch: 
   schedule:
-    - cron: '* * * * *'
+    - cron: '40 16 * * *'
 
 env: 
   # Get Variables from repository environment
