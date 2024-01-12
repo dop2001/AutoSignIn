@@ -8,9 +8,9 @@ jobs:
     steps: 
       - name: Run a multi-line script
         run: |
-          echo "hello github actions",
-          date,
-          pwd,
-          cd ~,
+          echo "hello github actions"
+          date
+          pwd
+          cd ~
           pwd
 
