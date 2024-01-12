@@ -11,5 +11,5 @@ jobs:
           git clone https://github.com/dop2001/Action.git
           cd Action
           chmod +x scripts/download.sh
-          ./download.sh
+          ./scripts/download.sh
           
