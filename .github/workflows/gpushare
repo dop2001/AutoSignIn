@@ -1,0 +1,12 @@
+name: Automatically login in GpuShare webpage
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name Print username and password
+      runs: |
+        echo $USERNAME
+        echo $PASSWORD
