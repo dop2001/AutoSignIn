@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name Print username and password
-      runs: |
-        echo $USERNAME
-        echo $PASSWORD
+      - name: Print username and password
+        run: |
+          echo $USERNAME
+          echo $PASSWORD
