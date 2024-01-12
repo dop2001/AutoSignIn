@@ -4,7 +4,7 @@ on:
   workflow_dispatch: 
   schedule:
     # trigger timer in 1:00 
-    - cron: '50 16 * * *'
+    - cron: '00 17 * * *'
 
 env: 
   # Get Variables from repository environment
