@@ -71,8 +71,8 @@ class AutoSignIn:
 if __name__ == '__main__':
     # 配置
     options = Options()
-    # options.add_argument("--headless")
-    # options.add_argument('--window-size=1920,1080')
+    options.add_argument("--headless")
+    options.add_argument('--window-size=1920,1080')
 
     # 创建 WebDriver.Edge 对象
     driver = webdriver.Edge(service=Service(r'driver/msedgedriver*'), options=options)
