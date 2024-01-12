@@ -4,7 +4,7 @@ This repository is a small tool for automatic sign-in, capable of performing the
 
 ## Scop of Use
 
-t can only be used for the automatic sign-in service of [Gpushare Cloud](https://gpushare.com/)  website, and your account needs to be a V2 member.
+It can only be used for the automatic sign-in service of [Gpushare Cloud](https://gpushare.com/)  website, and your account needs to be a V2 member.
 
 ## Deployment
 

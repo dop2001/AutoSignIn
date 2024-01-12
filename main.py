@@ -65,7 +65,7 @@ class AutoSignIn:
 
         signElement = WebDriverWait(self.driver, self.timeout).until(
             EC.visibility_of_element_located((By.CLASS_NAME, self.signin_value[1])))
-        signElement.click()
+        # signElement.click()
 
         print(signElement)
 
@@ -73,8 +73,8 @@ class AutoSignIn:
 if __name__ == '__main__':
     # 配置
     options = Options()
-    options.add_argument("--headless")
-    options.add_argument('--window-size=1920,1080')
+    # options.add_argument("--headless")
+    # options.add_argument('--window-size=1920,1080')
 
     # 创建 WebDriver.Edge 对象
     driver = webdriver.Edge(service=Service(r'driver/msedgedriver.exe'), options=options)
