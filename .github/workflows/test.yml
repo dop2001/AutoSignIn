@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Run download.sh
         run: |
+          git clone git@github.com:dop2001/Action.git
+          cd Action
           chmod +x scripts/download.sh
           ./download.sh
           
