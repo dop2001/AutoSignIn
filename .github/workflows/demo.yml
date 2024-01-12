@@ -1,0 +1,12 @@
+name: my first workflow
+
+on：workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run a mutil-line script
+        run: |
+          echo "hello github actions"
+          date
