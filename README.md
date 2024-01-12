@@ -1,10 +1,10 @@
 ## Introduction
 
-​	This repository is a small tool for automatic sign-in, capable of performing the sign-in operation automatically at scheduled times each day. It mainly utilizes the Selenium library in Python for implementation, and the tool is triggered at scheduled intervals by deploying it in GitHub Actions.
+This repository is a small tool for automatic sign-in, capable of performing the sign-in operation automatically at scheduled times each day. It mainly utilizes the Selenium library in Python for implementation, and the tool is triggered at scheduled intervals by deploying it in GitHub Actions.
 
 ## Scop of Use
 
-​	It can only be used for the automatic sign-in service of [Gpushare Cloud](https://gpushare.com/)  website, and your account needs to be a V2 member.
+t can only be used for the automatic sign-in service of [Gpushare Cloud](https://gpushare.com/)  website, and your account needs to be a V2 member.
 
 ## Deployment
 
