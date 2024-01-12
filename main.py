@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 from configs.Configs import Config
 
@@ -19,9 +20,9 @@ class AutoSignIn:
         self.login_value = ['ant-input-lg', 'verify-code', 'commonButton']
 
         self.signin_url = self.base_url + '/center/work/problem'
-        self.signin_value = ['sign-score-fix', 'sign-footer']
+        self.signin_value = ['auth-header-sign', 'sign-footer']
 
-        self.timeout = 10
+        self.timeout = 15
 
     def login(self):
         # 调用 WebDriver 对象的 get 方法, 可以让浏览器打开指定的网址
@@ -53,6 +54,11 @@ class AutoSignIn:
 
     def signIn(self):  #
         self.driver.get(self.signin_url)
+
+        addElement = WebDriverWait(self.driver, self.timeout).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "global-nav-auth-btn")))
+        ActionChains(driver).move_to_element(addElement).perform()
+
         iconElement = WebDriverWait(self.driver, self.timeout).until(
             EC.visibility_of_element_located((By.CLASS_NAME, self.signin_value[0])))
         iconElement.click()
@@ -65,10 +71,10 @@ class AutoSignIn:
 if __name__ == '__main__':
     # 配置
     options = Options()
-    options.add_argument("headless")
+    # options.add_argument("headless")
 
     # 创建 WebDriver.Edge 对象
-    driver = webdriver.Edge(service=Service(r'driver/msedgedriver'), options=options)
+    driver = webdriver.Edge(service=Service(r'driver/msedgedriver.exe'), options=options)
 
     autoSignIn = AutoSignIn(driver, Config())
 
