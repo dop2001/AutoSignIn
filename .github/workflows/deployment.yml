@@ -3,6 +3,7 @@ name: test
 on: 
   workflow_dispatch: 
   schedule:
+    # trigger timer in 0:50 
     - cron: '40 16 * * *'
 
 env: 
