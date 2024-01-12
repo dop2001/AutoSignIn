@@ -2,6 +2,10 @@ name: Automatically login in GpuShare webpage
 
 on: workflow_dispatch
 
+env: 
+  USERNAME: ${{vars.USERNAME}}
+  PASSWORD: ${{vars.PASSWORD}}
+
 jobs:
   build:
     runs-on: ubuntu-latest
