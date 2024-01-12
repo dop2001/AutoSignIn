@@ -8,6 +8,6 @@ jobs:
     steps:
       - name: Run download.sh
         run: |
-          chomd +x scripts/download.sh
+          chmod +x scripts/download.sh
           ./download.sh
           
