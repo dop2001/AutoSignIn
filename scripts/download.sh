@@ -31,3 +31,5 @@ fi
 
 ls -al ./driver
 
+# install pip package
+pip3 install selenium
