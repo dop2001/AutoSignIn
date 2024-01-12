@@ -1,0 +1,13 @@
+name: test
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run download.sh
+        run: |
+          chomd +x scripts/download.sh
+          ./download.sh
+          
