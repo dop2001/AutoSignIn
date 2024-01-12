@@ -30,4 +30,4 @@ fi
 
 echo $CurrentPath
 
-ls -al ./drive
+ls -al ./driver
