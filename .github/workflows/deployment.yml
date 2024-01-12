@@ -3,8 +3,8 @@ name: test
 on: 
   workflow_dispatch: 
   schedule:
-    # trigger timer in 0:50 
-    - cron: '40 16 * * *'
+    # trigger timer in 1:00 
+    - cron: '50 16 * * *'
 
 env: 
   # Get Variables from repository environment
