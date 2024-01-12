@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# git clone repository from GitHub
-git clone git@github.com:dop2001/Action.git
-cd Action
-
 # get current path
 CurrentPath=$(pwd)
 
