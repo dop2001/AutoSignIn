@@ -10,7 +10,7 @@ It can only be used for the automatic sign-in service of [Gpushare Cloud](https:
 
 - Clone this repository into your own account.
 
-- Set repository [variables]([Variables - GitHub Docs](https://docs.github.com/en/actions/learn-github-actions/variables)).
+- Set repository [variables](https://docs.github.com/en/actions/learn-github-actions/variables).
 
   ```bash
   USERNAEM="Your username"
