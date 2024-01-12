@@ -17,8 +17,10 @@ if [ $? -ne 0 ]; then
 fi
 
 # download and install Edge driver
+mkdir driver && cd driver
 wget -c $DriverURL -O Driver.zip
-mkdir driver && unzip Driver.zip -C ./driver
+unzip Driver.zip
+cd ../
 
 if [ $? -ne 0 ]; then
     echo "Driver install fail!"
