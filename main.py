@@ -70,6 +70,7 @@ class AutoSignIn:
 
         for item in signElements:
             item.click()
+            sleep(1)
 
         print(len(signElements))
 
