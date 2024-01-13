@@ -63,9 +63,15 @@ class AutoSignIn:
             EC.visibility_of_element_located((By.CLASS_NAME, self.signin_value[0])))
         iconElement.click()
 
-        signElement = WebDriverWait(self.driver, self.timeout).until(
+        WebDriverWait(self.driver, self.timeout).until(
             EC.visibility_of_element_located((By.CLASS_NAME, self.signin_value[1])))
-        signElement.click()
+
+        signElements = self.driver.find_elements(by=By.CLASS_NAME, value=self.signin_value[1])
+
+        for item in signElements:
+            item.click()
+
+        print(len(signElements))
 
 
 if __name__ == '__main__':
