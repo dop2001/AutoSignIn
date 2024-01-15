@@ -68,10 +68,12 @@ class AutoSignIn:
 
         signElements = self.driver.find_elements(by=By.CLASS_NAME, value=self.signin_value[1])
 
-        for item in signElements:
-            item.click()
-            sleep(1)
-
+        for idx, item in enumerate(signElements):
+            try:
+                item.click()
+                sleep(1)
+            except Exception as e:
+                print(idx)
         print(len(signElements))
 
 
