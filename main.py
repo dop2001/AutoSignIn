@@ -22,13 +22,13 @@ class AutoSignIn:
         self.signin_url = self.base_url + '/center/work/problem'
         self.signin_value = ['auth-header-sign', 'sign-footer']
 
-        self.timeout = 20
+        self.timeout = 60
 
     def login(self):
         # 调用 WebDriver 对象的 get 方法, 可以让浏览器打开指定的网址
         self.driver.get(self.login_url)
         # 等待页面元素加载完成
-        WebDriverWait(self.driver, self.timeout).until(
+        WebDriveErWait(self.driver, self.timeout).until(
             EC.visibility_of_element_located((By.CLASS_NAME, self.login_value[0])))
         # 获取全部输入框
         inputElements = self.driver.find_elements(by=By.CLASS_NAME, value=self.login_value[0])
@@ -52,7 +52,7 @@ class AutoSignIn:
         sleep(2)
         buttonElement.click()
 
-    def signIn(self):  #
+    def signIn(self):  
         self.driver.get(self.signin_url)
 
         addElement = WebDriverWait(self.driver, self.timeout).until(
