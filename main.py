@@ -28,7 +28,7 @@ class AutoSignIn:
         # 调用 WebDriver 对象的 get 方法, 可以让浏览器打开指定的网址
         self.driver.get(self.login_url)
         # 等待页面元素加载完成
-        WebDriveErWait(self.driver, self.timeout).until(
+        WebDriverWait(self.driver, self.timeout).until(
             EC.visibility_of_element_located((By.CLASS_NAME, self.login_value[0])))
         # 获取全部输入框
         inputElements = self.driver.find_elements(by=By.CLASS_NAME, value=self.login_value[0])
